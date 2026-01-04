@@ -1,0 +1,100 @@
+# General
+.DS_Store
+*.log
+*.tmp
+.env
+.env.local
+
+# Terraform
+**/.terraform/
+**/.terraform.lock.hcl
+**/terraform.tfstate
+**/terraform.tfstate.backup
+**/.terraform.tfstate.lock.info
+**/crash.log
+**/override.tf
+**/override.tf.json
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+venv/
+env/
+ENV/
+.venv
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+coverage/
+*.tsbuildinfo
+.npm
+.eslintcache
+
+# IDE
+.vscode/
+.idea/
+.cursor/
+*.swp
+*.swo
+*~
+
+# Testing
+.coverage
+htmlcov/
+.pytest_cache/
+.tox/
+junit.xml
+
+# Docker
+*.pid
+*.seed
+*.pid.lock
+
+# Kubernetes
+kubeconfig
+*.kubeconfig
+
+# Secrets
+secrets.yaml
+*-secrets.yaml
+*.pem
+*.key
+*.crt
+credentials.json
+
+# OS
+Thumbs.db
+
+# Cursor IDE specific
+.cursor/
+.cursorignore
+.cursorrules
+
+# VS Code - allow shared settings
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+!.vscode/tasks.json
+!.vscode/launch.json

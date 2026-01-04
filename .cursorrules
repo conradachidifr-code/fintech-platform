@@ -1,0 +1,147 @@
+# FinTech Platform - Cursor AI Rules
+
+## Project Context
+This is a microservices-based financial technology platform with:
+- Frontend: React + TypeScript
+- Backend: Python FastAPI
+- Infrastructure: Terraform + Kubernetes
+- CI/CD: GitHub Actions
+
+## Code Style Preferences
+
+### Python
+- Use Python 3.11+ features
+- Follow PEP 8 with 100 character line limit
+- Use type hints for all function signatures
+- Prefer Pydantic models for data validation
+- Use async/await for I/O operations
+- Write docstrings in Google format
+
+Example:
+```python
+from typing import Optional
+from pydantic import BaseModel
+
+async def get_user(user_id: str) -> Optional[User]:
+    """Retrieve user by ID.
+    
+    Args:
+        user_id: Unique user identifier
+        
+    Returns:
+        User object if found, None otherwise
+    """
+    pass
+```
+
+### TypeScript/React
+- Use functional components with hooks
+- Prefer const over let
+- Use explicit types, avoid 'any'
+- Use async/await over promises
+- Component file structure: imports → types → component → export
+
+Example:
+```typescript
+interface UserProps {
+  userId: string;
+  onUpdate?: () => void;
+}
+
+export const UserProfile: React.FC<UserProps> = ({ userId, onUpdate }) => {
+  const [user, setUser] = useState<User | null>(null);
+  
+  // Component logic
+  
+  return <div>...</div>;
+};
+```
+
+### Testing
+- Write tests for all new features
+- Use descriptive test names
+- Follow AAA pattern: Arrange, Act, Assert
+- Mock external dependencies
+- Target 80%+ coverage
+
+### Infrastructure as Code
+- Use descriptive resource names
+- Tag all AWS resources
+- Use modules for reusable components
+- Document non-obvious decisions
+- Use variables for environment-specific values
+
+## Architecture Patterns
+
+### Backend Services
+- Use dependency injection
+- Implement health check endpoints
+- Add structured logging
+- Use middleware for cross-cutting concerns
+- Implement circuit breakers for external calls
+
+### Frontend
+- Use React Query for server state
+- Implement error boundaries
+- zy loading for routes
+- Implement proper loading states
+- Handle errors gracefully
+
+### API Design
+- Use RESTful conventions
+- Version APIs (/api/v1/)
+- Return consistent error formats
+- Use proper HTTP status codes
+- Document with OpenAPI/Swagger
+
+## Security Requirements
+- Never commit secrets or credentials
+- Validate all user inputs
+- Use parameterized queries
+- Implement rate limiting
+- Add CORS configuration
+- Use HTTPS only
+- Sanitize error messages
+
+## Git Commit Messages
+Format: `<type>(<scope>): <subject>`
+
+Types:
+- feat: New feature
+- fix: Bug fix
+- docs: Documentation
+- style: Formatting
+- refactor: Code restructuring
+- test: Tests
+- chore: Maintenance
+
+Example: `feat(api-gateway): add rate limiting middleware`
+
+## Documentation
+- Update README when adding features
+- Document environment variables
+- Add runbooks for operations
+- Include examples in API docs
+- Comment complex logic
+
+## Performance
+- Optimize database queries
+- Use caching where appropriate
+- Implement pagination for lists
+- Lazy load heavy components
+- Monitor bundle sizes
+
+## Error Handling
+- Use custom error classes
+- Log errors with context
+- Provide user-friendly messages
+- Implement retry logic
+- Add error tracking (Sentry/similar)
+
+## When Suggesting Code
+1. Explain the approach first
+2. Show complete, runnable examples
+3. Include error handling
+4. Add relevant tests
+5. Consider edge cases
+6. Point out potential issues

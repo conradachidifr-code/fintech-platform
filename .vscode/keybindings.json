@@ -1,0 +1,15 @@
+[
+  {
+    "key": "cmd+k cmd+g",
+    "command": "workbench.action.terminal.new",
+    "when": "!terminalFocus"
+  },
+  {
+    "key": "cmd+shift+t",
+    "command": "workbench.action.tasks.runTask"
+  },
+  {
+    "key": "cmd+k cmd+t",
+    "command": "testing.runAll"
+  }
+]
