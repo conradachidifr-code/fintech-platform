@@ -1,0 +1,18 @@
+# Default owners for everything
+* @your-team/platform-team
+
+# Frontend team
+/services/frontend/ @your-team/frontend-team
+
+# Backend team
+/services/api-gateway/ @your-team/backend-team
+/services/user-service/ @your-team/backend-team
+/services/payment-service/ @your-team/backend-team
+
+# DevOps team
+/infrastructure/ @your-team/devops-team
+/.github/workflows/ @your-team/devops-team
+/shared/monitoring/ @your-team/devops-team
+
+# Documentation - everyone can contribute
+/docs/ @your-team/platform-team

@@ -1,0 +1,15 @@
+[MASTER]
+max-line-length=100
+disable=
+    C0114,  # missing-module-docstring
+    C0115,  # missing-class-docstring
+    C0116,  # missing-function-docstring
+    R0903,  # too-few-public-methods
+good-names=i,j,k,ex,_,id,db
+
+[MESSAGES CONTROL]
+confidence=HIGH
+
+[DESIGN]
+max-args=7
+max-attributes=10
