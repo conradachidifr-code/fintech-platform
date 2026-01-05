@@ -99,5 +99,10 @@ Thumbs.db
 !.vscode/tasks.json
 !.vscode/launch.json
 
+# Terraform variable files that might contain secrets
+**/terraform.tfvars.secret
+**/secret.tfvars
+**/*.auto.tfvars.secret
+
 # custom scripts
 scripts/
