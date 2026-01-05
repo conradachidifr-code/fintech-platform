@@ -98,3 +98,6 @@ Thumbs.db
 !.vscode/extensions.json
 !.vscode/tasks.json
 !.vscode/launch.json
+
+# custom scripts
+scripts/
